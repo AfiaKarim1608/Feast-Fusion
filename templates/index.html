@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Ingredient Suggester</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+
+</head>
+<body>
+    <div class="navbar">Feast Fusion: Ingredients that fit together.</div>
+    <div class="container">
+        <div class="box">
+            <img src="https://img.freepik.com/free-photo/top-view-food-ingredients-with-notebook-pumpkin_23-2148834716.jpg?semt=ais_hybrid" alt="Recipe Image"> <!-- Replace with actual image -->
+            <div>
+                <p><b>Enter a recipe name to get a list of suggested ingredients!!!</b></p>
+                <form action="/predict" method="post">
+                    <input type="text" name="recipe_name" placeholder="Enter Recipe Name" required>
+                    <button type="submit">Get Ingredients</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+

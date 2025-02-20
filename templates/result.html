@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Ingredients</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <div class="navbar">Feast Fusion: Ingredients that fit together.</div>
+    <h1>Ingredients for {{ recipe_name }}</h1>
+    
+    {% if ingredients %}
+        <ol>
+            {% for ingredient in ingredients %}
+                <li>{{ ingredient }}</li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <p>No ingredients found.</p>
+    {% endif %}
+
+    <a href="/">Go Back</a>
+</body>
+</html>
+
+
