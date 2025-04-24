@@ -17,4 +17,4 @@ joblib.dump(model, "RecipeIngredients.pkl")
 joblib.dump(vectorizer, "vectorizer.pkl")
 joblib.dump(df, "recipes_df.pkl") 
 
-print("Model training completed and saved successfully!")
+print("Model trained and saved successfully!")
